@@ -283,6 +283,10 @@ function addStyles() {
       padding: 0 !important;
     }
 
+    .ltd-flyout-content dd::before {
+      content: none !important;
+    }
+
     .ltd-flyout-content dd.newline {
       flex-basis: 100% !important;
       height: 0 !important;
