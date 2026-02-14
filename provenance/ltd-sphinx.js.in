@@ -6,11 +6,15 @@
  */
 function createProvenanceDropdown() {
   // 1. Define the HTML and CSS as template literals.
+  const upstreamOwner = "@UPSTREAM_OWNER@" !== "" ? "@UPSTREAM_OWNER@" : "the upstream owner";
+  const upstreamDocs  = "@UPSTREAM_DOCS@";
+  const upstreamRepo  = "@UPSTREAM_REPO@";
+
   const flyoutHTML = `
     <details class="provenance-dropdown">
       <summary class="provenance-summary"><strong>Provenance</strong></summary>
       <div class="provenance-content">
-        The translation is <strong>unofficial</strong> and <strong>community-driven</strong>. If you find any inaccuracies, always refer to the <a href="@UPSTREAM_DOCS@">official documentation</a> or the <a href="@UPSTREAM_REPO@">source repository</a> of the upstream project for the most reliable information.
+        The translation is <strong>unofficial</strong> and <strong>community-driven</strong>. <strong>No endorsement</strong> by ${upstreamOwner} is intended. If you find any inaccuracies, always refer to the <a href="${upstreamDocs}">official documentation</a> or the <a href="${upstreamRepo}">source repository</a> of the upstream project for the most reliable information.
       </div>
     </details>
   `;
