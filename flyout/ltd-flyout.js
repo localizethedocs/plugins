@@ -198,7 +198,7 @@ function addStyles() {
       position: fixed !important;
       right: 15px !important;
       bottom: 50px !important;
-      z-index: 5000 !important;
+      z-index: 10000 !important;
       padding: 5px !important;
       border-radius: 5px !important;
       max-width: 320px !important;
